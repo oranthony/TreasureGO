@@ -7,18 +7,114 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
+import SwiftyJSON
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
+    
+    
+    @IBOutlet weak var stepContentTextView: UITextView!
+    @IBOutlet weak var hintContentTextView: UITextView!
+    @IBOutlet weak var map: MKMapView!
+    
+    
+    //let locationManager = CLLocationManager()
+    //var myLocation:CLLocationCoordinate2D?
+    var manager:CLLocationManager!
+    var myLocations: [CLLocation] = []
+    
+    var segueInfo: Int = -1
+    var currentStep = 0
+    var json:JSON = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Setup our Location Manager
+        manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
+        manager.startUpdatingLocation()
+        
+        //Setup our Map View
+        map.delegate = self
+        //map.mapType = MKMapType.Satellite
+        map.showsUserLocation = true
+        
+        //Apply the center
+        //centerMapOnLocation(location: initialLocation)
+        
+        
+        //Load json
+        let path = Bundle.main.path(forResource: "document", ofType: "json")
+        let jsonData : NSData = NSData(contentsOfFile: path!)!
+        
+        json = JSON(data: jsonData as Data) // Note: data: parameter name
+        
+        refreshStepContent()
+        
+        //centerMapOnLocation(location: map.userLocation.coordinate)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //Refresh the step indicator
+    func refreshStepContent(){
+        stepContentTextView.text = json["list"][segueInfo]["content"][currentStep]["title"].string
     }
+    
+    
+    let regionRadius: CLLocationDistance = 1000
+    
+    func centerMapOnLocation(location: CLLocationCoordinate2D) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location,
+                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        map.setRegion(coordinateRegion, animated: true)
+    }
+    
+    /*func locationManager(manager:CLLocationManager, didUpdateLocations locations:[AnyObject]) {
+        //theLabel.text = "\(locations[0])"
+        myLocations.append(locations[0] as! CLLocation)
+        
+        let spanX = 0.7
+        let spanY = 0.7
+        var newRegion = MKCoordinateRegion(center: map.userLocation.coordinate, span: MKCoordinateSpanMake(spanX, spanY))
+        map.setRegion(newRegion, animated: true)
+        
+        //Save the previous location
+        /*if (myLocations.count > 1){
+            var sourceIndex = myLocations.count - 1
+            var destinationIndex = myLocations.count - 2
+            
+            let c1 = myLocations[sourceIndex].coordinate
+            let c2 = myLocations[destinationIndex].coordinate
+            var a = [c1, c2]
+            var polyline = MKPolyline(coordinates: &a, count: a.count)
+            map.add(polyline)
+        }*/
+    }*/
+    
+    //If we want to create a path with the previous locations
+    /*func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        
+        if overlay is MKPolyline {
+            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
+            polylineRenderer.strokeColor = UIColor.blue
+            polylineRenderer.lineWidth = 4
+            return polylineRenderer
+        }
+        return nil
+    }*/
+    
+    /*func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        let location = locations.last as! CLLocation
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        self.mapView.setRegion(region, animated: true)
+    }*/
+    
 
 
 }

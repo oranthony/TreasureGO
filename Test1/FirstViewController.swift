@@ -11,18 +11,21 @@ import MapKit
 import CoreLocation
 import SwiftyJSON
 
-class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
+class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate, UITextFieldDelegate {
     
     
     @IBOutlet weak var stepContentTextView: UITextView!
     @IBOutlet weak var hintContentTextView: UITextView!
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var hintButton: UIButton!
     
+    //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hintContentTextView))
     
     //let locationManager = CLLocationManager()
     //var myLocation:CLLocationCoordinate2D?
     var manager:CLLocationManager!
     var myLocations: [CLLocation] = []
+    let regionRadius: CLLocationDistance = 1000
     
     var segueInfo: Int = -1
     var currentStep = 0
@@ -30,6 +33,8 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hintButton.addTarget(self, action: #selector(FirstViewController.showHint), for: .touchUpInside)
         
         //Setup our Location Manager
         manager = CLLocationManager()
@@ -56,15 +61,23 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
         refreshStepContent()
         
         //centerMapOnLocation(location: map.userLocation.coordinate)
+        
+        //We hide the hint
+        self.hintContentTextView.isHidden = true
+        
     }
 
     //Refresh the step indicator
     func refreshStepContent(){
         stepContentTextView.text = json["list"][segueInfo]["content"][currentStep]["title"].string
+        //hintContentTextView.text = "Tap to get a hint"
+        hintContentTextView.text = json["list"][segueInfo]["content"][currentStep]["hint"].string
     }
     
-    
-    let regionRadius: CLLocationDistance = 1000
+    func showHint(){
+        print("we show hint")
+        self.hintContentTextView.isHidden = false
+    }
     
     func centerMapOnLocation(location: CLLocationCoordinate2D) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location,

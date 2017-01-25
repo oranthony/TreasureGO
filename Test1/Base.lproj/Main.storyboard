@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-320.38043478260875"/>
+            <point key="canvasLocation" x="749" y="-312"/>
         </scene>
         <!--Réglages-->
         <scene sceneID="wg7-f3-ORb">
@@ -194,6 +194,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Réglages" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="leaveButton" destination="k6z-UW-Sa7" id="ns7-uk-4hB"/>
                         <outlet property="nextButton" destination="fKY-gf-cN4" id="Yk9-qb-asB"/>
                     </connections>
                 </viewController>
@@ -221,7 +222,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ife-0B-b9P" id="9SK-1l-YxO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -276,10 +277,10 @@
             </objects>
             <point key="canvasLocation" x="-1039" y="-734"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="2lV-u1-Rbm">
             <objects>
-                <viewController id="D3g-lQ-LcS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" id="D3g-lQ-LcS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CZL-DO-rxb"/>
                         <viewControllerLayoutGuide type="bottom" id="5fC-6l-X8Y"/>

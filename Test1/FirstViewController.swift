@@ -88,8 +88,9 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
     
     //Refresh the step indicator
     func refreshStepContent(){
+        
         stepContentTextView.text = json["list"][segueInfo]["content"][currentStep]["title"].string
-        //hintContentTextView.text = "Tap to get a hint"
+        
         hintContentTextView.text = json["list"][segueInfo]["content"][currentStep]["hint"].string
     }
     
@@ -102,24 +103,39 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
     
     
     func goNextStep(){
+        
         //We hide the hint
         self.hintContentTextView.isHidden = true
         
         //Set the step to the next step
         currentStep += 1
+        
         //Check if final step
         if(json["list"][segueInfo]["content"][currentStep].exists()){
+            
             refreshStepContent()
+            
         }else{
-            print("end")
+            
+            let alert = UIAlertController(title: "Well done !", message: "The treasure hunt is finished", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Go to home screen", style: UIAlertActionStyle.default, handler: { action in
+                self.backToHomeScreen()}
+            ))
+            
+            self.present(alert, animated: true, completion: nil)
+            
         }
-        
-        
         
         
         //We go back to the first view
         tabBarController?.selectedIndex = 0
         
+    }
+    
+    func backToHomeScreen(){
+        let homeController = self.storyboard!.instantiateViewController(withIdentifier: "Home")
+        UIApplication.shared.keyWindow?.rootViewController = homeController
     }
 
 }

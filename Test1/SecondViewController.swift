@@ -11,6 +11,7 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var leaveButton: UIButton!
     
     var svc: FirstViewController?;
     
@@ -23,11 +24,18 @@ class SecondViewController: UIViewController {
         
         //detect when player want to go to the next step
         nextButton.addTarget(self, action: #selector(SecondViewController.goNextStep), for: .touchUpInside)
+        
+        //detect when player want to leave the game
+        leaveButton.addTarget(self, action: #selector(SecondViewController.leaveGame), for: .touchUpInside)
     }
     
 
     func goNextStep(){
         svc?.goNextStep();
+    }
+    
+    func leaveGame(){
+        svc?.backToHomeScreen()
     }
 
 

@@ -10,14 +10,24 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var svc: FirstViewController?;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let barViewControllers = self.tabBarController?.viewControllers
+        svc = barViewControllers![0] as? FirstViewController
+        
+        //detect when player want to go to the next step
+        nextButton.addTarget(self, action: #selector(SecondViewController.goNextStep), for: .touchUpInside)
     }
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func goNextStep(){
+        svc?.goNextStep();
     }
 
 

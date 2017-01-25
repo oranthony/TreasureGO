@@ -106,10 +106,16 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
         self.hintContentTextView.isHidden = true
         
         //Set the step to the next step
-        //TODO check if final step
         currentStep += 1
+        //Check if final step
+        if(json["list"][segueInfo]["content"][currentStep].exists()){
+            refreshStepContent()
+        }else{
+            print("end")
+        }
         
-        refreshStepContent()
+        
+        
         
         //We go back to the first view
         tabBarController?.selectedIndex = 0

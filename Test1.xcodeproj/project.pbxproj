@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		42233115E0368DC4C272EBB1 /* Pods_Test1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BD28DC3FCD8530E2DE3F3F /* Pods_Test1.framework */; };
 		64C222EE1E19C8D400747392 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C222ED1E19C8D400747392 /* MapKit.framework */; };
+		64C89CBB1E39113F00079A82 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C89CBA1E39113F00079A82 /* WebViewController.swift */; };
 		64F8686C1E0C7FC400A36467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F8686B1E0C7FC400A36467 /* AppDelegate.swift */; };
 		64F8686E1E0C7FC400A36467 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F8686D1E0C7FC400A36467 /* FirstViewController.swift */; };
 		64F868701E0C7FC400A36467 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F8686F1E0C7FC400A36467 /* SecondViewController.swift */; };
@@ -34,6 +35,7 @@
 		3D0AD26B6EA6B70C12269073 /* Pods-Test1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test1UITests/Pods-Test1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		59B23D6863DF3028FBAFC601 /* Pods-Test1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test1Tests/Pods-Test1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		64C222ED1E19C8D400747392 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		64C89CBA1E39113F00079A82 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		64F868681E0C7FC400A36467 /* Test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F8686B1E0C7FC400A36467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64F8686D1E0C7FC400A36467 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				64F868761E0C7FC400A36467 /* LaunchScreen.storyboard */,
 				64F868A91E11936300A36467 /* logo_perso.png */,
 				64F868791E0C7FC400A36467 /* Info.plist */,
+				64C89CBA1E39113F00079A82 /* WebViewController.swift */,
 			);
 			path = Test1;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				64F868B31E129A4500A36467 /* TableController.swift in Sources */,
 				64F868701E0C7FC400A36467 /* SecondViewController.swift in Sources */,
 				64F8686C1E0C7FC400A36467 /* AppDelegate.swift in Sources */,
+				64C89CBB1E39113F00079A82 /* WebViewController.swift in Sources */,
 				64F8686E1E0C7FC400A36467 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -95,6 +95,13 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
     }
     
     
+    //Return the URL of the current monument's page
+    func getUrl() -> JSON{
+        
+        return json["list"][segueInfo]["content"][currentStep]
+        
+    }
+    
     
     //We display the textView with the hint
     func showHint(){

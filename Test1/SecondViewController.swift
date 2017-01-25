@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import SafariServices
+import SwiftyJSON
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var leaveButton: UIButton!
+    @IBOutlet weak var webButton: UIButton!
+    
+    var json:JSON = []
     
     var svc: FirstViewController?;
+    //let urlString = "https://www.hackingwithswift.com"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +33,9 @@ class SecondViewController: UIViewController {
         
         //detect when player want to leave the game
         leaveButton.addTarget(self, action: #selector(SecondViewController.leaveGame), for: .touchUpInside)
+        
+        //detect when player want to get web info
+        webButton.addTarget(self, action: #selector(SecondViewController.displayWebPage), for: .touchUpInside)
     }
     
 
@@ -36,6 +45,18 @@ class SecondViewController: UIViewController {
     
     func leaveGame(){
         svc?.backToHomeScreen()
+    }
+    
+    func displayWebPage(){
+        
+        json = (svc?.getUrl())!
+        
+        if let url = URL(string: json["info"].string! as String) {
+            let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            vc.delegate = self
+            
+            present(vc, animated: true)
+        }
     }
 
 

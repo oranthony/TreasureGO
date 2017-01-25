@@ -117,21 +117,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-gf-cN4">
-                                <rect key="frame" x="0.0" y="57" width="208" height="227"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKY-gf-cN4">
+                                <rect key="frame" x="0.0" y="57" width="217" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.90980392160000001" blue="0.47843137250000001" alpha="0.90226348460000005" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Next">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="60" maxX="30" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="56" minY="-30" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Next" image="Forward-50-2">
                                     <color key="titleColor" red="0.5568627451" green="0.47450980390000003" blue="0.84313725490000002" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-gF-jZo">
-                                <rect key="frame" x="208" y="57" width="206" height="224"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Md-gF-jZo">
+                                <rect key="frame" x="216" y="57" width="198" height="227"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5568627451" green="0.47450980390000003" blue="0.84313725490000002" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Locate answer">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="60" maxX="30" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="-30" maxX="-127" maxY="0.0"/>
+                                <state key="normal" title="Locate answer" image="Marker Filled-50">
                                     <color key="titleColor" red="0.95294117649999999" green="0.90980392160000001" blue="0.47843137250000001" alpha="0.90226348460000005" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -196,6 +198,7 @@
                     <connections>
                         <outlet property="leaveButton" destination="k6z-UW-Sa7" id="ns7-uk-4hB"/>
                         <outlet property="nextButton" destination="fKY-gf-cN4" id="Yk9-qb-asB"/>
+                        <outlet property="webButton" destination="o1b-Ts-dPG" id="OR8-h7-ggg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -209,10 +212,12 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="40" sectionFooterHeight="40" id="Luh-9Y-aEY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.18383217800000001" green="0.52013046470000002" blue="0.8749206853" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.18383217800000001" green="0.52013046470000002" blue="0.8749206853" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Quest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="304-nh-eDq">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.18383217800000001" green="0.52013046470000002" blue="0.8749206853" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -327,6 +332,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Forward-50-2" width="50" height="50"/>
+        <image name="Marker Filled-50" width="50" height="50"/>
         <image name="first" width="30" height="30"/>
         <image name="img_GuidePage2" width="375" height="667"/>
         <image name="second" width="30" height="30"/>

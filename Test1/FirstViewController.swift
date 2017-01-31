@@ -122,6 +122,14 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
     
     func goNextStep(){
         
+        //Remove anotations on map
+        let allAnnotations = self.map.annotations
+        self.map.removeAnnotations(allAnnotations)
+        
+        //Remove all path on map
+        let overlays = map.overlays
+        map.removeOverlays(overlays)
+        
         //We hide the hint
         self.hintContentTextView.isHidden = true
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D3g-lQ-LcS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D3g-lQ-LcS">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -142,7 +142,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.83921568627450982" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Lorem ipsum">
+                                <state key="normal" title="Center on my location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -162,10 +162,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Settings" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AZP-pf-TGe">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Settings" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AZP-pf-TGe">
                                 <rect key="frame" x="0.0" y="12" width="414" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.56300374710000001" green="0.74570987749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -198,6 +199,8 @@
                     <connections>
                         <outlet property="leaveButton" destination="k6z-UW-Sa7" id="ns7-uk-4hB"/>
                         <outlet property="nextButton" destination="fKY-gf-cN4" id="Yk9-qb-asB"/>
+                        <outlet property="recenterButton" destination="Vdp-Xx-lYi" id="nhu-19-foY"/>
+                        <outlet property="showPathButton" destination="4Md-gF-jZo" id="zc2-3S-g5o"/>
                         <outlet property="webButton" destination="o1b-Ts-dPG" id="OR8-h7-ggg"/>
                     </connections>
                 </viewController>
@@ -212,14 +215,17 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="40" sectionFooterHeight="40" id="Luh-9Y-aEY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.18383217800000001" green="0.52013046470000002" blue="0.8749206853" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.18383217800000001" green="0.52013046470000002" blue="0.8749206853" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.5568627451" green="0.47450980390000003" blue="0.84313725490000002" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.5568627451" green="0.47450980390000003" blue="0.84313725490000002" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Quest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="304-nh-eDq">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.18383217800000001" green="0.52013046470000002" blue="0.8749206853" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.47712093589999999" green="0.50551903249999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
@@ -230,6 +236,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.5568627451" green="0.47450980390000003" blue="0.84313725490000002" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.5568627451" green="0.47450980390000003" blue="0.84313725490000002" alpha="0.7012788955" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="show" identifier="tableSegue" id="ATK-vO-egu"/>
                                 </connections>

@@ -26,6 +26,9 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
     var segueInfo: Int = -1
     var currentStep = 0
     var json:JSON = []
+    var hasCenterdMap = false
+    
+    var userLocation:CLLocation!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,20 +63,27 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
         //We hide the hint
         self.hintContentTextView.isHidden = true
         
-        
     }
     
-    
+    func doResetMap(){
+        centerMapOnLocation(location: userLocation.coordinate)
+        
+        //We go back to the first view
+        tabBarController?.selectedIndex = 0
+    }
     
     //We keep the map centered on the pplayer
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let userLocation:CLLocation = locations[0]
+        userLocation = locations[0]
         _ = userLocation.coordinate.longitude;
         _ = userLocation.coordinate.latitude;
         
-        centerMapOnLocation(location: userLocation.coordinate)
+        if(hasCenterdMap == false){
+            doResetMap()
+        }
+        
+        
     }
-    
     
     
     
@@ -143,6 +153,77 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
     func backToHomeScreen(){
         let homeController = self.storyboard!.instantiateViewController(withIdentifier: "Home")
         UIApplication.shared.keyWindow?.rootViewController = homeController
+    }
+    
+    
+    func drawPath(){
+        
+        let latitude = json["list"][segueInfo]["content"][currentStep]["latitude"].double
+        
+        let longitude = json["list"][segueInfo]["content"][currentStep]["longitude"].double
+        
+        let sourceLocation = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        let destinationLocation = CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!)
+        
+        let sourcePlacemark = MKPlacemark(coordinate: sourceLocation, addressDictionary: nil)
+        let destinationPlacemark = MKPlacemark(coordinate: destinationLocation, addressDictionary: nil)
+        
+        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+        
+        let monumentName = json["list"][segueInfo]["content"][currentStep]["name"].string
+        
+        let destinationAnnotation = MKPointAnnotation()
+        destinationAnnotation.title = monumentName
+        
+        if let location = destinationPlacemark.location {
+            destinationAnnotation.coordinate = location.coordinate
+        }
+        
+        
+        
+        self.map.showAnnotations([destinationAnnotation], animated: true )
+        
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = sourceMapItem
+        directionRequest.destination = destinationMapItem
+        directionRequest.transportType = .automobile
+        
+        
+        // Calculate the direction
+        let directions = MKDirections(request: directionRequest)
+        
+        
+        directions.calculate {
+            (response, error) -> Void in
+            
+            guard let response = response else {
+                if let error = error {
+                    print("Error: \(error)")
+                }
+                
+                return
+            }
+            
+            let route = response.routes[0]
+            self.map.add((route.polyline), level: MKOverlayLevel.aboveRoads)
+            
+            let rect = route.polyline.boundingMapRect
+            self.map.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
+        }
+        
+        
+        
+        //We go back to the first view
+        tabBarController?.selectedIndex = 0
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.red
+        renderer.lineWidth = 4.0
+        
+        return renderer
     }
 
 }

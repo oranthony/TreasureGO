@@ -13,8 +13,10 @@ import SwiftyJSON
 class SecondViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var showPathButton: UIButton!
     @IBOutlet weak var leaveButton: UIButton!
     @IBOutlet weak var webButton: UIButton!
+    @IBOutlet weak var recenterButton: UIButton!
     
     var json:JSON = []
     
@@ -36,6 +38,12 @@ class SecondViewController: UIViewController, SFSafariViewControllerDelegate {
         
         //detect when player want to get web info
         webButton.addTarget(self, action: #selector(SecondViewController.displayWebPage), for: .touchUpInside)
+        
+        //detect when player want to see the path for the location on the map
+        showPathButton.addTarget(self, action: #selector(SecondViewController.displayPathOnMap), for: .touchUpInside)
+        
+        //detect when player want to recenter the map
+        recenterButton.addTarget(self, action: #selector(SecondViewController.recenterMap), for: .touchUpInside)
     }
     
 
@@ -59,6 +67,13 @@ class SecondViewController: UIViewController, SFSafariViewControllerDelegate {
         }
     }
 
-
+    func displayPathOnMap(){
+        svc?.drawPath()
+    }
+    
+    func recenterMap(){
+        print("do recenter")
+        svc?.doResetMap();
+    }
 }
 

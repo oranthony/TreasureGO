@@ -72,7 +72,6 @@ class SecondViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     func recenterMap(){
-        print("do recenter")
         svc?.doResetMap();
     }
 }

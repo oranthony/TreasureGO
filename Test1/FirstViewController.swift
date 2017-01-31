@@ -79,6 +79,7 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
         _ = userLocation.coordinate.latitude;
         
         if(hasCenterdMap == false){
+            hasCenterdMap = true
             doResetMap()
         }
         
@@ -220,7 +221,7 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.red
+        renderer.strokeColor = UIColor.blue
         renderer.lineWidth = 4.0
         
         return renderer

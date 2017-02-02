@@ -160,8 +160,12 @@ class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewD
     }
     
     func backToHomeScreen(){
-        let homeController = self.storyboard!.instantiateViewController(withIdentifier: "Home")
-        UIApplication.shared.keyWindow?.rootViewController = homeController
+        
+        let homeController:UIViewController = self.storyboard!.instantiateViewController(withIdentifier: "Home")
+        
+        //UIApplication.shared.keyWindow?.rootViewController = homeController
+        
+        self.present(homeController, animated: false, completion: nil)
     }
     
     

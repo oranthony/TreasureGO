@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TreasureGOWatch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>TreasureGOWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>641EA4A61E4CC0B500F01DBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>64F868671E0C7FC400A36467</key>
 		<dict>
 			<key>primary</key>

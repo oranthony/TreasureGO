@@ -10,6 +10,7 @@
 		42233115E0368DC4C272EBB1 /* Pods_Test1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BD28DC3FCD8530E2DE3F3F /* Pods_Test1.framework */; };
 		641EA4A21E479D7700F01DBE /* equipements-publics-nca.json in Resources */ = {isa = PBXBuildFile; fileRef = 641EA4A11E479D7700F01DBE /* equipements-publics-nca.json */; };
 		641EA4A41E47A18600F01DBE /* FreeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641EA4A31E47A18600F01DBE /* FreeNavigationController.swift */; };
+		641EA4B41E4CC0B600F01DBE /* TreasureGOWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 641EA4B31E4CC0B600F01DBE /* TreasureGOWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		64C222EE1E19C8D400747392 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C222ED1E19C8D400747392 /* MapKit.framework */; };
 		64C89CBB1E39113F00079A82 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C89CBA1E39113F00079A82 /* WebViewController.swift */; };
 		64F8686C1E0C7FC400A36467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F8686B1E0C7FC400A36467 /* AppDelegate.swift */; };
@@ -32,12 +33,48 @@
 		64F868B71E13138E00A36467 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F868B61E13138E00A36467 /* background2.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		641EA4B51E4CC0B600F01DBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64F868601E0C7FC400A36467 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 641EA4B21E4CC0B600F01DBE;
+			remoteInfo = "TreasureGOWatch Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		641EA4C91E4CC0B600F01DBE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				641EA4B41E4CC0B600F01DBE /* TreasureGOWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641EA4CD1E4CC0B600F01DBE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		249A6DF8448A72EE2504417C /* Pods-Test1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test1/Pods-Test1.release.xcconfig"; sourceTree = "<group>"; };
 		3D0AD26B6EA6B70C12269073 /* Pods-Test1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test1UITests/Pods-Test1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		59B23D6863DF3028FBAFC601 /* Pods-Test1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test1Tests/Pods-Test1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		641EA4A11E479D7700F01DBE /* equipements-publics-nca.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "equipements-publics-nca.json"; path = "../../../Downloads/equipements-publics-nca.json"; sourceTree = "<group>"; };
 		641EA4A31E47A18600F01DBE /* FreeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeNavigationController.swift; sourceTree = "<group>"; };
+		641EA4A71E4CC0B500F01DBE /* TreasureGOWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreasureGOWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		641EA4B31E4CC0B600F01DBE /* TreasureGOWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TreasureGOWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C222ED1E19C8D400747392 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		64C89CBA1E39113F00079A82 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		64F868681E0C7FC400A36467 /* Test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +110,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		641EA4B01E4CC0B600F01DBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		64F868651E0C7FC400A36467 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				64F868681E0C7FC400A36467 /* Test1.app */,
+				641EA4A71E4CC0B500F01DBE /* TreasureGOWatch.app */,
+				641EA4B31E4CC0B600F01DBE /* TreasureGOWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +225,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		641EA4A61E4CC0B500F01DBE /* TreasureGOWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641EA4CA1E4CC0B600F01DBE /* Build configuration list for PBXNativeTarget "TreasureGOWatch" */;
+			buildPhases = (
+				641EA4A51E4CC0B500F01DBE /* Resources */,
+				641EA4C91E4CC0B600F01DBE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				641EA4B61E4CC0B600F01DBE /* PBXTargetDependency */,
+			);
+			name = TreasureGOWatch;
+			productName = TreasureGOWatch;
+			productReference = 641EA4A71E4CC0B500F01DBE /* TreasureGOWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		641EA4B21E4CC0B600F01DBE /* TreasureGOWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 641EA4C61E4CC0B600F01DBE /* Build configuration list for PBXNativeTarget "TreasureGOWatch Extension" */;
+			buildPhases = (
+				641EA4AF1E4CC0B600F01DBE /* Sources */,
+				641EA4B01E4CC0B600F01DBE /* Frameworks */,
+				641EA4B11E4CC0B600F01DBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TreasureGOWatch Extension";
+			productName = "TreasureGOWatch Extension";
+			productReference = 641EA4B31E4CC0B600F01DBE /* TreasureGOWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		64F868671E0C7FC400A36467 /* Test1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64F868921E0C7FC400A36467 /* Build configuration list for PBXNativeTarget "Test1" */;
@@ -189,6 +269,7 @@
 				64F868661E0C7FC400A36467 /* Resources */,
 				BE4B88102D954BE2433A791E /* [CP] Embed Pods Frameworks */,
 				6DF0D25165ECC89612FD92DF /* [CP] Copy Pods Resources */,
+				641EA4CD1E4CC0B600F01DBE /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -209,6 +290,17 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "anthony loroscio";
 				TargetAttributes = {
+					641EA4A61E4CC0B500F01DBE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QA8D4M9LK9;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					641EA4B21E4CC0B600F01DBE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QA8D4M9LK9;
+						ProvisioningStyle = Automatic;
+					};
 					64F868671E0C7FC400A36467 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QA8D4M9LK9;
@@ -235,11 +327,27 @@
 			projectRoot = "";
 			targets = (
 				64F868671E0C7FC400A36467 /* Test1 */,
+				641EA4A61E4CC0B500F01DBE /* TreasureGOWatch */,
+				641EA4B21E4CC0B600F01DBE /* TreasureGOWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		641EA4A51E4CC0B500F01DBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		641EA4B11E4CC0B600F01DBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		64F868661E0C7FC400A36467 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,6 +421,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		641EA4AF1E4CC0B600F01DBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		64F868641E0C7FC400A36467 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +442,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		641EA4B61E4CC0B600F01DBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 641EA4B21E4CC0B600F01DBE /* TreasureGOWatch Extension */;
+			targetProxy = 641EA4B51E4CC0B600F01DBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		64F868761E0C7FC400A36467 /* LaunchScreen.storyboard */ = {
@@ -349,6 +472,81 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		641EA4C71E4CC0B600F01DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = QA8D4M9LK9;
+				INFOPLIST_FILE = "$(SRCROOT)/Test1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loroscio.Test1.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		641EA4C81E4CC0B600F01DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = QA8D4M9LK9;
+				INFOPLIST_FILE = "$(SRCROOT)/Test1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loroscio.Test1.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		641EA4CB1E4CC0B600F01DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QA8D4M9LK9;
+				IBSC_MODULE = TreasureGOWatch_Extension;
+				INFOPLIST_FILE = TreasureGOWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loroscio.Test1.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TreasureGOWatch/TreasureGOWatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		641EA4CC1E4CC0B600F01DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = QA8D4M9LK9;
+				IBSC_MODULE = TreasureGOWatch_Extension;
+				INFOPLIST_FILE = TreasureGOWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.loroscio.Test1.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TreasureGOWatch/TreasureGOWatch-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 		64F868901E0C7FC400A36467 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,6 +675,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		641EA4C61E4CC0B600F01DBE /* Build configuration list for PBXNativeTarget "TreasureGOWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641EA4C71E4CC0B600F01DBE /* Debug */,
+				641EA4C81E4CC0B600F01DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		641EA4CA1E4CC0B600F01DBE /* Build configuration list for PBXNativeTarget "TreasureGOWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				641EA4CB1E4CC0B600F01DBE /* Debug */,
+				641EA4CC1E4CC0B600F01DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		64F868631E0C7FC400A36467 /* Build configuration list for PBXProject "Test1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

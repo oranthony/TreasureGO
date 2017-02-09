@@ -51,7 +51,7 @@ class FreeNavigationController: UIViewController,CLLocationManagerDelegate,MKMap
         
         //print(json)
         
-        for (key,subJson):(String, JSON) in json {
+        /*for (key,subJson):(String, JSON) in json {
             
             for(keyBis, subJsonBis):(String, JSON) in subJson{
             
@@ -62,7 +62,7 @@ class FreeNavigationController: UIViewController,CLLocationManagerDelegate,MKMap
                 }
             }
             
-        }
+        }*/
         
         drawMarkers()
     }
@@ -100,9 +100,9 @@ class FreeNavigationController: UIViewController,CLLocationManagerDelegate,MKMap
     }
     
     func drawMarkers(){
-        for (key,subJson):(String, JSON) in json {
+        for (_,subJson):(String, JSON) in json {
             
-            for(keyBis, subJsonBis):(String, JSON) in subJson{
+            for(_, subJsonBis):(String, JSON) in subJson{
                 
                 //print(subJsonBis["TYPE"])
                 

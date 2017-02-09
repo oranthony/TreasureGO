@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import SwiftyJSON
 
-class FirstViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate, UITextFieldDelegate {
+class FirstViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var stepContentTextView: UITextView!
     @IBOutlet weak var hintContentTextView: UITextView!

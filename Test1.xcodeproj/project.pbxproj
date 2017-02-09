@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		42233115E0368DC4C272EBB1 /* Pods_Test1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BD28DC3FCD8530E2DE3F3F /* Pods_Test1.framework */; };
+		641EA4A21E479D7700F01DBE /* equipements-publics-nca.json in Resources */ = {isa = PBXBuildFile; fileRef = 641EA4A11E479D7700F01DBE /* equipements-publics-nca.json */; };
+		641EA4A41E47A18600F01DBE /* FreeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641EA4A31E47A18600F01DBE /* FreeNavigationController.swift */; };
 		64C222EE1E19C8D400747392 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C222ED1E19C8D400747392 /* MapKit.framework */; };
 		64C89CBB1E39113F00079A82 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C89CBA1E39113F00079A82 /* WebViewController.swift */; };
 		64F8686C1E0C7FC400A36467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F8686B1E0C7FC400A36467 /* AppDelegate.swift */; };
@@ -34,6 +36,8 @@
 		249A6DF8448A72EE2504417C /* Pods-Test1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test1/Pods-Test1.release.xcconfig"; sourceTree = "<group>"; };
 		3D0AD26B6EA6B70C12269073 /* Pods-Test1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test1UITests/Pods-Test1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		59B23D6863DF3028FBAFC601 /* Pods-Test1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test1Tests/Pods-Test1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		641EA4A11E479D7700F01DBE /* equipements-publics-nca.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "equipements-publics-nca.json"; path = "../../../Downloads/equipements-publics-nca.json"; sourceTree = "<group>"; };
+		641EA4A31E47A18600F01DBE /* FreeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeNavigationController.swift; sourceTree = "<group>"; };
 		64C222ED1E19C8D400747392 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		64C89CBA1E39113F00079A82 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		64F868681E0C7FC400A36467 /* Test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +121,7 @@
 		64F8686A1E0C7FC400A36467 /* Test1 */ = {
 			isa = PBXGroup;
 			children = (
+				641EA4A11E479D7700F01DBE /* equipements-publics-nca.json */,
 				64F868B61E13138E00A36467 /* background2.png */,
 				64F868AD1E1294E700A36467 /* document.json */,
 				64F868B21E129A4500A36467 /* TableController.swift */,
@@ -135,6 +140,7 @@
 				64F868A91E11936300A36467 /* logo_perso.png */,
 				64F868791E0C7FC400A36467 /* Info.plist */,
 				64C89CBA1E39113F00079A82 /* WebViewController.swift */,
+				641EA4A31E47A18600F01DBE /* FreeNavigationController.swift */,
 			);
 			path = Test1;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			files = (
 				64F8689E1E0C90CD00A36467 /* treasure-map.png in Resources */,
 				64F868781E0C7FC400A36467 /* LaunchScreen.storyboard in Resources */,
+				641EA4A21E479D7700F01DBE /* equipements-publics-nca.json in Resources */,
 				64F868B71E13138E00A36467 /* background2.png in Resources */,
 				64F868751E0C7FC400A36467 /* Assets.xcassets in Resources */,
 				64F868AA1E11936300A36467 /* logo_perso.png in Resources */,
@@ -313,6 +320,7 @@
 				64F868B31E129A4500A36467 /* TableController.swift in Sources */,
 				64F868701E0C7FC400A36467 /* SecondViewController.swift in Sources */,
 				64F8686C1E0C7FC400A36467 /* AppDelegate.swift in Sources */,
+				641EA4A41E47A18600F01DBE /* FreeNavigationController.swift in Sources */,
 				64C89CBB1E39113F00079A82 /* WebViewController.swift in Sources */,
 				64F8686E1E0C7FC400A36467 /* FirstViewController.swift in Sources */,
 			);

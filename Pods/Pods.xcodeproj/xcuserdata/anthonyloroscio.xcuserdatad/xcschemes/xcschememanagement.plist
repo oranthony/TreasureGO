@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Test1Tests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Test1UITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,16 +23,6 @@
 			<true/>
 		</dict>
 		<key>6B54654FC0287F2D0A5BC30215255077</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7F1627468781559F2AC2A85579968819</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E53AF44E9B1B63B30413DD73EF2791F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

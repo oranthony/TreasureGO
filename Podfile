@@ -7,16 +7,9 @@ target 'Test1' do
 
   # Pods for Test1
     pod 'SwiftyJSON'
-  end
 
-  target 'Test1Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Test1UITests' do
-    inherit! :search_paths
-    # Pods for testing
+  # Pods for google places
+    pod 'GooglePlaces'
   end
 
   

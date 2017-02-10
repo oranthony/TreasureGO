@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chasse-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Test1" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                             <constraint firstItem="Bqh-Gf-vQv" firstAttribute="top" secondItem="iSj-dc-QOh" secondAttribute="top" id="vVf-Cs-aKk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chasse" image="navigation" id="acW-dT-cKf">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="acW-dT-cKf">
                         <inset key="imageInsets" minX="25" minY="27" maxX="25" maxY="24"/>
                     </tabBarItem>
                     <connections>
@@ -111,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="749" y="-312"/>
         </scene>
-        <!--Réglages-->
+        <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Test1" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,7 +254,7 @@
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="NDk-cv-Gan" secondAttribute="centerX" id="yI5-Ti-u5i"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Réglages" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="leaveButton" destination="k6z-UW-Sa7" id="ns7-uk-4hB"/>
                         <outlet property="nextButton" destination="fKY-gf-cN4" id="Yk9-qb-asB"/>
@@ -425,8 +425,6 @@
         <image name="Marker Filled-50" width="50" height="50"/>
         <image name="img_GuidePage2" width="375" height="667"/>
         <image name="left-arrow-2" width="24" height="18"/>
-        <image name="navigation" width="60" height="60"/>
-        <image name="second" width="30" height="30"/>
     </resources>
     <color key="tintColor" red="0.26666666666666666" green="0.56470588235294117" blue="0.91764705882352937" alpha="0.0" colorSpace="calibratedRGB"/>
 </document>

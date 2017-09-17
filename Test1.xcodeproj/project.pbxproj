@@ -24,7 +24,6 @@
 		64F868A21E0C95EC00A36467 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F868A11E0C95EC00A36467 /* map.png */; };
 		64F868A41E0C973C00A36467 /* pin-on-path.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F868A31E0C973C00A36467 /* pin-on-path.png */; };
 		64F868A61E0C985A00A36467 /* navigation.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F868A51E0C985A00A36467 /* navigation.png */; };
-		64F868A81E11926700A36467 /* imageedit_1_2690193496.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F868A71E11926700A36467 /* imageedit_1_2690193496.png */; };
 		64F868AA1E11936300A36467 /* logo_perso.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F868A91E11936300A36467 /* logo_perso.png */; };
 		64F868AC1E12887E00A36467 /* rsz_1map.png in Resources */ = {isa = PBXBuildFile; fileRef = 64F868AB1E12887D00A36467 /* rsz_1map.png */; };
 		64F868AE1E1294E700A36467 /* document.json in Resources */ = {isa = PBXBuildFile; fileRef = 64F868AD1E1294E700A36467 /* document.json */; };
@@ -94,9 +93,8 @@
 		64F868A11E0C95EC00A36467 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		64F868A31E0C973C00A36467 /* pin-on-path.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin-on-path.png"; sourceTree = "<group>"; };
 		64F868A51E0C985A00A36467 /* navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation.png; sourceTree = "<group>"; };
-		64F868A71E11926700A36467 /* imageedit_1_2690193496.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = imageedit_1_2690193496.png; path = ../../../Downloads/imageedit_1_2690193496.png; sourceTree = "<group>"; };
-		64F868A91E11936300A36467 /* logo_perso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_perso.png; path = ../../../Documents/logo_perso.png; sourceTree = "<group>"; };
-		64F868AB1E12887D00A36467 /* rsz_1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rsz_1map.png; path = ../../Downloads/rsz_1map.png; sourceTree = "<group>"; };
+		64F868A91E11936300A36467 /* logo_perso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_perso.png; path = ../logo_perso.png; sourceTree = "<group>"; };
+		64F868AB1E12887D00A36467 /* rsz_1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_1map.png; sourceTree = "<group>"; };
 		64F868AD1E1294E700A36467 /* document.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = document.json; path = ../../../Downloads/document.json; sourceTree = "<group>"; };
 		64F868B01E1296FB00A36467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Test1/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64F868B21E129A4500A36467 /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
@@ -123,6 +121,13 @@
 			files = (
 				64C222EE1E19C8D400747392 /* MapKit.framework in Frameworks */,
 				42233115E0368DC4C272EBB1 /* Pods_Test1.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72565D4C25928618EB87A0DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +180,6 @@
 				64F8686B1E0C7FC400A36467 /* AppDelegate.swift */,
 				64F8686D1E0C7FC400A36467 /* FirstViewController.swift */,
 				64F8686F1E0C7FC400A36467 /* SecondViewController.swift */,
-				64F868A71E11926700A36467 /* imageedit_1_2690193496.png */,
 				64F868A31E0C973C00A36467 /* pin-on-path.png */,
 				64F868A51E0C985A00A36467 /* navigation.png */,
 				64F868A11E0C95EC00A36467 /* map.png */,
@@ -231,6 +235,7 @@
 			buildPhases = (
 				641EA4A51E4CC0B500F01DBE /* Resources */,
 				641EA4C91E4CC0B600F01DBE /* Embed App Extensions */,
+				72565D4C25928618EB87A0DB /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,7 +369,6 @@
 				64F868B11E1296FB00A36467 /* Main.storyboard in Resources */,
 				64F868A41E0C973C00A36467 /* pin-on-path.png in Resources */,
 				64F868A01E0C91DE00A36467 /* treasure-map white.png in Resources */,
-				64F868A81E11926700A36467 /* imageedit_1_2690193496.png in Resources */,
 				64F868AE1E1294E700A36467 /* document.json in Resources */,
 				64F8689C1E0C8D9700A36467 /* background1.png in Resources */,
 			);
@@ -682,6 +686,7 @@
 				641EA4C81E4CC0B600F01DBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		641EA4CA1E4CC0B600F01DBE /* Build configuration list for PBXNativeTarget "TreasureGOWatch" */ = {
 			isa = XCConfigurationList;
@@ -690,6 +695,7 @@
 				641EA4CC1E4CC0B600F01DBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64F868631E0C7FC400A36467 /* Build configuration list for PBXProject "Test1" */ = {
 			isa = XCConfigurationList;

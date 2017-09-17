@@ -53,3 +53,5 @@ playground.xcworkspace
 
 #Pods
 Pods/
+*.pbxproj
+*.pbxproj

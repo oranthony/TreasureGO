@@ -95,7 +95,7 @@
 		64F868A51E0C985A00A36467 /* navigation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation.png; sourceTree = "<group>"; };
 		64F868A91E11936300A36467 /* logo_perso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_perso.png; path = ../logo_perso.png; sourceTree = "<group>"; };
 		64F868AB1E12887D00A36467 /* rsz_1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_1map.png; sourceTree = "<group>"; };
-		64F868AD1E1294E700A36467 /* document.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = document.json; path = ../../../Downloads/document.json; sourceTree = "<group>"; };
+		64F868AD1E1294E700A36467 /* document.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = document.json; path = ../document.json; sourceTree = "<group>"; };
 		64F868B01E1296FB00A36467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Test1/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64F868B21E129A4500A36467 /* TableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		64F868B61E13138E00A36467 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = SOURCE_ROOT; };

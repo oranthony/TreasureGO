@@ -50,3 +50,8 @@ fastlane/test_output
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+#Pods
+Pods/
+*.pbxproj
+*.pbxproj
